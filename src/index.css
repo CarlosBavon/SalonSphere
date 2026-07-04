@@ -21,7 +21,7 @@ body {
 }
 
 ::selection {
-  background: #4fe067;
+  background: var(--secondary-color);
 }
 
 code {

@@ -113,6 +113,38 @@
     border-radius: 90px;
 }
 
+.marquee {
+    margin-top: 20px;
+    border-top: 1px solid var(--secondary-text);
+    border-bottom: 1px solid var(--secondary-text);
+    padding: 30px;
+    overflow: hidden;
+    background: transparent;
+    color: var(--secondary-text);
+}
+
+.marquee-track {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-loop 150s linear infinite;
+    width: max-content;
+}
+
+.marquee-track span {
+    display: inline-block;
+    flex-shrink: 0;
+    padding-right: 40px;
+}
+
+@keyframes scroll-loop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 @media (max-width: 900px) {
     .hero {
         flex-direction: column;

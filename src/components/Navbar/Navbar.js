@@ -6,7 +6,7 @@ function Navbar () {
         <>
             <nav className="nav">
                 <div className="nav-logo">
-                    <Link to="/">SalonSphere</Link>
+                    <Link to="/"><span style={{color: '#4fe067'}}>◼</span> SalonSphere</Link>
                 </div>
                 <div className="nav-links">
                     <Link className="nav-link">Discover</Link>

@@ -1,0 +1,113 @@
+.platform {
+    min-height: 100vh;
+    margin: 100px;
+}
+
+.platform-head {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--secondary-text);
+    margin-bottom: 1rem;
+    display: inline-block;
+    
+}
+
+.platform-header {
+    width: 900px;
+    font-size: 4rem;
+    font-family: "Viaoda Libre", serif;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--primary-color);
+    flex: 1 1 0;
+    min-width: 280px;
+}
+
+.plat-hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.plat-hero-p {
+    font-size: 1.15rem;
+    flex: 1 1 0;
+    min-width: 280px;
+    text-align: left;
+    margin-bottom: 0;
+    align-self: flex-end;
+}
+
+.feature-grid {
+    margin-top: 4.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.feature-card {
+    background: transparent;
+    padding: 2.5rem;
+    border: 1px solid var(--secondary-text);
+}
+.feature-card:hover {
+    background-color: var(--primary-color);
+    transition: all 0.3s;
+    color: var(--secondary-color);
+    .feature-card-h3 {
+        color: var(--background-color);
+    }
+    .feature-card-p {
+        color: var(--background-color);
+    }
+}
+
+.feature-card-h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.feature-card-p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.feature-icon {
+    padding-bottom: 20px;
+    font-size: 2rem;
+}
+
+.stats {
+    margin-top: 4.5rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem;
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+.stat-header {
+    color: var(--secondary-color);
+    font-size: 4rem;
+    font-family: "Viaoda Libre", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+.stat-desc {
+    color: var(--background-color);
+}
+
+@media (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
