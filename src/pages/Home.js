@@ -1,6 +1,7 @@
 import Hero from "../components/Hero/hero";
 import React from 'react';
 import './Home.css';
+import Testimonials from "../components/Testimonials/Testimonials";
 
 function Home () {
 
@@ -82,6 +83,11 @@ function Home () {
                     <p className="stat-desc">From signup to first booking</p>
                 </div>
             </div>
+            <section className="testimonials">
+                <h4 className="testimonial-head"><span style={{color: '#4fe067'}}>◼</span> LOVED BY OPERATORS</h4>
+                <h1 className="testimonial-header">The teams behind the world's most loved studios.</h1>
+                <Testimonials/>
+            </section>
         </>
     )
 }

@@ -1,9 +1,11 @@
-.platform {
+.platform,
+.testimonials {
     min-height: 100vh;
     margin: 100px;
 }
 
-.platform-head {
+.platform-head,
+.testimonial-head {
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -14,7 +16,8 @@
     
 }
 
-.platform-header {
+.platform-header,
+.testimonial-header {
     width: 900px;
     font-size: 4rem;
     font-family: "Viaoda Libre", serif;

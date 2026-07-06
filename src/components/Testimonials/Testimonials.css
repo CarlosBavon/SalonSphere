@@ -1,0 +1,85 @@
+.testimonials-section {
+  background: transparent;
+  padding: 80px 24px;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.testimonial-card {
+  background: transparent;
+  padding: 40px 32px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  border-right: 1px solid #2a2a2a;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.star {
+  font-size: 20px;
+  color: #444;
+  letter-spacing: 1px;
+}
+
+.star.filled {
+  color: var(--secondary-color);
+}
+
+.quote {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: "Viaoda Libre", serif;
+}
+
+.author {
+  padding-top: 20px;
+}
+
+.name {
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 2px 0;
+}
+
+.title {
+  color: #888;
+  font-size: 0.875rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 48px 16px;
+  }
+
+  .testimonial-card {
+    padding: 28px 20px;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+}
