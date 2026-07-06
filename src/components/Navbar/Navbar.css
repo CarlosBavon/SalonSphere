@@ -83,8 +83,10 @@
 }
 
 .nav-cta button {
-  font-size: 0.85rem;
-  font-weight: 540;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: "Viaoda Libre", serif;
   padding: 0.8rem 1rem;
   border: none;
   cursor: pointer;
