@@ -1,38 +1,41 @@
 .site-footer {
   background: var(--primary-color);
-  margin-top: 100px;
+  margin-top: clamp(60px, 10vw, 100px);
   color: var(--background-color);
   border-top: 1px solid var(--background-color);
+  padding: 0 clamp(1.5rem, 5vw, 5rem);
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2.5rem;
-  padding: 7rem 100px 5rem;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(3rem, 6vw, 7rem) 0 clamp(2rem, 4vw, 5rem);
   border-bottom: 1px solid var(--background-color);
   margin-bottom: 2rem;
 }
 
 .brand-col h2 {
   color: var(--background-color);
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   font-family: "Viaoda Libre", serif;
   letter-spacing: 0.95px;
   margin-bottom: 0.5rem;
-  width: 700px;
+  max-width: 100%;
+  width: auto;
 }
 
 .brand-col .tagline {
   color: #b0b5c0;
-  font-size: 0.8rem;
+  font-size: clamp(0.75rem, 0.9vw, 0.8rem);
   line-height: 1.6;
   margin-top: 10px;
+  max-width: 400px;
 }
 
 .footer-col h4 {
   color: var(--secondary-color);
-  font-size: 0.8rem;
+  font-size: clamp(0.7rem, 0.9vw, 0.8rem);
   text-transform: uppercase;
   letter-spacing: 1.2px;
   font-weight: 600;
@@ -50,7 +53,7 @@
 .footer-col ul li a {
   color: #b0b5c0;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
   transition: color 0.2s ease;
 }
 
@@ -61,9 +64,10 @@
 .footer-bottom {
   display: flex;
   justify-content: space-between;
-  margin-right: 100px;
-  margin-left: 100px;
-  font-size: 0.85rem;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: clamp(0.75rem, 0.85vw, 0.85rem);
   padding-bottom: 20px;
   color: #6b7280;
 }
@@ -73,49 +77,82 @@
   color: #8b92a0;
 }
 
-/* --- 📱 MOBILE RESPONSIVENESS --- */
-@media (max-width: 768px) {
-  .site-footer {
-    padding: 2rem 1.5rem 1.5rem;
-  }
-
-  /* 1. Stack columns vertically */
+/* --- TABLETS (1024px and below) --- */
+@media (max-width: 1024px) {
   .footer-grid {
-    grid-template-columns: 1fr; /* Single column */
-    gap: 2rem;
-    text-align: center; /* Center everything on mobile */
-    padding-bottom: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(2rem, 4vw, 2.5rem);
   }
-
-  /* 2. Center the brand tagline */
   .brand-col .tagline {
     max-width: 100%;
+  }
+}
+
+/* --- LARGE PHONES & SMALL TABLETS (768px and below) --- */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 0 clamp(1.2rem, 4vw, 2rem);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 2rem;
+    padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(1.5rem, 3vw, 2.5rem);
+  }
+  .brand-col .tagline {
     margin-left: auto;
     margin-right: auto;
   }
-
-  /* 3. Make links easier to tap (larger touch targets) */
   .footer-col ul li a {
-    display: inline-block; /* Ensures proper padding */
-    padding: 0.2rem 0;
-    font-size: 1rem; /* Slightly larger for readability */
+    display: inline-block;
+    padding: 0;
+    font-size: 1rem;
   }
-
-  /* 4. Stack the bottom copyright and crafted line */
   .footer-bottom {
     flex-direction: column;
     text-align: center;
     gap: 0.3rem;
   }
+}
 
-  .footer-bottom .crafted {
-    font-size: 0.8rem;
+/* --- EXTRA SMALL PHONES (480px and below) --- */
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 0 1rem;
+  }
+  .footer-grid {
+    gap: 1.5rem;
+    padding: 2rem 0 1.5rem;
+  }
+  .brand-col h2 {
+    font-size: 1.4rem;
+  }
+  .footer-col h4 {
+    font-size: 0.75rem;
+    margin-bottom: 0.8rem;
+  }
+  .footer-col ul li {
+    margin-bottom: 0.4rem;
+  }
+  .footer-col ul li a {
+    font-size: 0.9rem;
+    padding: 0.2rem 0;
+  }
+  .footer-bottom {
+    font-size: 0.7rem;
+    padding-bottom: 1rem;
   }
 }
 
-/* Extra small phones (under 400px) */
-@media (max-width: 400px) {
+/* --- TINY PHONES (360px and below) --- */
+@media (max-width: 360px) {
   .brand-col h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+  .footer-col ul li a {
+    font-size: 0.8rem;
+  }
+  .footer-bottom {
+    font-size: 0.65rem;
   }
 }

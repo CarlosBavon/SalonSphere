@@ -1,116 +1,239 @@
 .platform,
 .testimonials {
-    min-height: 100vh;
-    margin: 100px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: clamp(40px, 10vw, 100px) clamp(16px, 5vw, 100px);
 }
 
 .platform-head,
 .testimonial-head {
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--secondary-text);
-    margin-bottom: 1rem;
-    display: inline-block;
-    
+  font-size: clamp(0.7rem, 1vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--secondary-text);
+  margin-bottom: 1rem;
+  display: inline-block;
 }
 
 .platform-header,
 .testimonial-header {
-    width: 900px;
-    font-size: 4rem;
-    font-family: "Viaoda Libre", serif;
-    font-weight: 900;
-    font-style: normal;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    color: var(--primary-color);
-    flex: 1 1 0;
-    min-width: 280px;
+  width: 100%;
+  max-width: 900px;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-family: "Viaoda Libre", serif;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--primary-color);
+  flex: 1 1 0;
+  min-width: 280px;
 }
 
 .plat-hero {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.5rem, 3vw, 2rem);
+  align-items: center;
 }
 
 .plat-hero-p {
-    font-size: 1.15rem;
-    flex: 1 1 0;
-    min-width: 280px;
-    text-align: left;
-    margin-bottom: 0;
-    align-self: flex-end;
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  flex: 1 1 0;
+  min-width: 280px;
+  text-align: left;
+  margin-bottom: 0;
+  align-self: flex-end;
 }
 
 .feature-grid {
-    margin-top: 4.5rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  margin-top: clamp(3rem, 5vw, 4.5rem);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
 }
 
 .feature-card {
-    background: transparent;
-    padding: 2.5rem;
-    border: 1px solid var(--secondary-text);
+  background: transparent;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid var(--secondary-text);
+  transition: all 0.3s ease;
 }
+
 .feature-card:hover {
-    background-color: var(--primary-color);
-    transition: all 0.3s;
-    color: var(--secondary-color);
-    .feature-card-h3 {
-        color: var(--background-color);
-    }
-    .feature-card-p {
-        color: var(--background-color);
-    }
+  background-color: var(--primary-color);
+  transition: all 0.3s;
+  color: var(--secondary-color);
+}
+
+.feature-card:hover .feature-card-h3 {
+  color: var(--background-color);
+}
+
+.feature-card:hover .feature-card-p {
+  color: var(--background-color);
 }
 
 .feature-card-h3 {
-    font-size: 1.7rem;
-    font-weight: 600;
-    margin: 0 0 0.5rem 0;
-    color: var(--primary-color);
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+  transition: color 0.3s;
 }
 
 .feature-card-p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #555;
-    margin: 0;
-    margin-top: 30px;
+  font-size: clamp(0.85rem, 0.95vw, 0.95rem);
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+  margin-top: clamp(20px, 3vw, 30px);
+  transition: color 0.3s;
 }
 
 .feature-icon {
-    padding-bottom: 20px;
-    font-size: 2rem;
+  padding-bottom: 20px;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
 }
 
 .stats {
-    margin-top: 4.5rem;
-    display: flex;
-    justify-content: space-around;
-    padding: 4rem;
-    background-color: var(--primary-color);
-    width: 100%;
+  margin-top: clamp(3rem, 5vw, 4.5rem);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem 1.5rem;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 4rem);
+  background-color: var(--primary-color);
+  width: 100%;
+  text-align: center;
+}
+
+.stat-item {
+  flex: 1 1 0;
+  min-width: 120px;
 }
 
 .stat-header {
-    color: var(--secondary-color);
-    font-size: 4rem;
-    font-family: "Viaoda Libre", serif;
-    font-weight: 900;
-    font-style: normal;
+  color: var(--secondary-color);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-family: "Viaoda Libre", serif;
+  font-weight: 900;
+  font-style: normal;
 }
 .stat-desc {
-    color: var(--background-color);
+  color: var(--background-color);
+  font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
-@media (max-width: 768px) {
+/* --- TABLETS (≤ 1024px) --- */
+@media (max-width: 1024px) {
+  .platform,
+  .testimonials {
+    margin: clamp(30px, 8vw, 80px) clamp(20px, 4vw, 60px);
+  }
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats {
+    padding: clamp(1.5rem, 4vw, 3rem);
+  }
+}
+
+/* --- LARGE PHONES & SMALL TABLETS (≤ 820px) --- */
+@media (max-width: 820px) {
+  .platform,
+  .testimonials {
+    margin: clamp(20px, 6vw, 50px) clamp(16px, 3vw, 30px);
+  }
+  .plat-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .plat-hero-p {
+    align-self: flex-start;
+  }
   .feature-grid {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .feature-card {
+    border-width: 0 0 1px 0;
+  }
+  .feature-card:last-child {
+    border-bottom: none;
+  }
+  .stats {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+  .stat-item {
+    min-width: unset;
+  }
+}
+
+/* --- PHONES (≤ 480px) --- */
+@media (max-width: 480px) {
+  .platform,
+  .testimonials {
+    margin: 16px 12px;
+    min-height: auto;
+  }
+  .platform-header,
+  .testimonial-header {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+  }
+  .plat-hero-p {
+    font-size: 0.95rem;
+  }
+  .feature-card {
+    padding: 1.2rem 1rem;
+  }
+  .feature-card-h3 {
+    font-size: 1.1rem;
+  }
+  .feature-card-p {
+    font-size: 0.85rem;
+    margin-top: 12px;
+  }
+  .stats {
+    padding: 1.5rem 1rem;
+    gap: 1.2rem;
+  }
+  .stat-header {
+    font-size: 2rem;
+  }
+  .stat-desc {
+    font-size: 0.75rem;
+  }
+}
+
+/* --- EXTRA SMALL PHONES (≤ 360px) --- */
+@media (max-width: 360px) {
+  .platform,
+  .testimonials {
+    margin: 12px 8px;
+  }
+  .platform-header,
+  .testimonial-header {
+    font-size: 1.5rem;
+    min-width: 200px;
+  }
+  .plat-hero-p {
+    font-size: 0.85rem;
+  }
+  .feature-card {
+    padding: 1rem 0.8rem;
+  }
+  .feature-card-h3 {
+    font-size: 1rem;
+  }
+  .feature-card-p {
+    font-size: 0.8rem;
+  }
+  .stat-header {
+    font-size: 1.6rem;
   }
 }
