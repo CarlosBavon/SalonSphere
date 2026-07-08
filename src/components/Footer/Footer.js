@@ -1,6 +1,17 @@
 import './Footer.css';
 
 function Footer() {
+    const linkStyle = {
+        background: 'none',
+        border: 'none',
+        color: 'inherit',
+        cursor: 'pointer',
+        textDecoration: 'none',
+        fontSize: 'inherit',
+        fontFamily: 'inherit',
+        padding: 0,
+    };
+
     return (
         <footer className="site-footer">
             <div className="footer-inner">
@@ -15,10 +26,10 @@ function Footer() {
                     <div className="footer-col">
                         <h4>Platform</h4>
                         <ul>
-                            <li><a href="#">Bookings</a></li>
-                            <li><a href="#">Payments</a></li>
-                            <li><a href="#">Marketing</a></li>
-                            <li><a href="#">Staff</a></li>
+                            <li><button type="button" style={linkStyle}>Bookings</button></li>
+                            <li><button type="button" style={linkStyle}>Payments</button></li>
+                            <li><button type="button" style={linkStyle}>Marketing</button></li>
+                            <li><button type="button" style={linkStyle}>Staff</button></li>
                         </ul>
                     </div>
 
@@ -26,9 +37,9 @@ function Footer() {
                         <div style={{ marginBottom: '1.8rem' }}>
                             <h4>Company</h4>
                             <ul>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Discover</a></li>
+                                <li><button type="button" style={linkStyle}>Pricing</button></li>
+                                <li><button type="button" style={linkStyle}>FAQ</button></li>
+                                <li><button type="button" style={linkStyle}>Discover</button></li>
                             </ul>
                         </div>
                     </div>
@@ -36,15 +47,15 @@ function Footer() {
                         <div className="footer-col">
                             <h4>Get Started</h4>
                             <ul>
-                                <li><a href="#">Sign in</a></li>
-                                <li><a href="#">Create account</a></li>
+                                <li><button type="button" style={linkStyle}>Sign in</button></li>
+                                <li><button type="button" style={linkStyle}>Create account</button></li>
                             </ul>
                         </div>
                         <div className="footer-col" style={{ marginTop: '30px' }}>
                             <h4>Privacy</h4>
                             <ul>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms and Services</a></li>
+                                <li><button type="button" style={linkStyle}>Privacy Policy</button></li>
+                                <li><button type="button" style={linkStyle}>Terms and Services</button></li>
                             </ul>
                         </div>
                     </div>
