@@ -15,10 +15,10 @@ function Footer () {
                 <div className="footer-col">
                     <h4>Platform</h4>
                     <ul>
-                        <li><a href="#">Bookings</a></li>
-                        <li><a href="#">Payments</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Staff</a></li>
+                        <li><a>Bookings</a></li>
+                        <li><a>Payments</a></li>
+                        <li><a>Marketing</a></li>
+                        <li><a>Staff</a></li>
                     </ul>
                 </div>
 
@@ -26,9 +26,9 @@ function Footer () {
                     <div style={{marginBottom: '1.8rem'}}>
                         <h4>Company</h4>
                         <ul>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Discover</a></li>
+                            <li><a>Pricing</a></li>
+                            <li><a>FAQ</a></li>
+                            <li><a>Discover</a></li>
                         </ul>
                     </div>
                 </div>
@@ -36,15 +36,15 @@ function Footer () {
                     <div className="footer-col">
                         <h4>Get Started</h4>
                         <ul>
-                            <li><a href="#">Sign in</a></li>
-                            <li><a href="#">Create account</a></li>
+                            <li><a>Sign in</a></li>
+                            <li><a>Create account</a></li>
                         </ul>
                     </div> 
                     <div className="footer-col" style={{marginTop:'30px'}}>
                         <h4>Privacy</h4>
                         <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms and Services</a></li>
+                            <li><a>Privacy Policy</a></li>
+                            <li><a>Terms and Services</a></li>
                         </ul>
                     </div>
                 </div>
