@@ -2,8 +2,23 @@ import Hero from "../components/Hero/hero";
 import React from 'react';
 import './Home.css';
 import Testimonials from "../components/Testimonials/Testimonials";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-function Home () {
+function Home() {
+
+    const location = useLocation();
+
+    useEffect(() => {
+        const state = location.state;
+        if (state?.scrollTo) {
+            const el = document.getElementById(state.scrollTo);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+            window.history.replaceState({}, document.title);
+        }
+    }, [location]);
 
     const features = [
         {
@@ -46,15 +61,16 @@ function Home () {
 
     return (
         <>
-            <Hero/>
+            <Hero />
+            <div id="platform"></div>
             <section className="platform">
-                <h4 className="platform-head"><span style={{color: '#4fe067'}}>◼</span> The Platform</h4>
+                <h4 className="platform-head"><span style={{ color: '#4fe067' }}>◼</span> The Platform</h4>
                 <div className="plat-hero">
-                    <h1 className="platform-header">Every tool your<br/> studio runs on.<br/><i style={{color: 'grey'}}>Replaced by one.</i></h1>
+                    <h1 className="platform-header">Every tool your<br /> studio runs on.<br /><i style={{ color: 'grey' }}>Replaced by one.</i></h1>
 
                     <p className="plat-hero-p">From the first tap on a booking link to the last receipt of the day — SalonSphere is the connective tissue that keeps your business calm, profitable and growing.</p>
                 </div>
-                
+
                 <div className="feature-grid">
                     {features.map((feature) => (
                         <div key={feature.id} className="feature-card">
@@ -84,12 +100,12 @@ function Home () {
                 </div>
             </div>
             <section className="testimonials">
-                <h4 className="testimonial-head"><span style={{color: '#4fe067'}}>◼</span> LOVED BY OPERATORS</h4>
+                <h4 className="testimonial-head"><span style={{ color: '#4fe067' }}>◼</span> LOVED BY OPERATORS</h4>
                 <h1 className="testimonial-header">The teams behind the world's most loved studios.</h1>
-                <Testimonials/>
+                <Testimonials />
             </section>
         </>
-    )
-}
+    );
+};
 
 export default Home;

@@ -1,0 +1,138 @@
+.discover-section.full-width-section {
+  max-width: 100%;
+}
+
+.discover-section.full-width-section .studios-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.discover-section {
+  max-width: 100%;
+  padding-top: 4rem;
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+}
+
+.discover-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.discover-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+.search-bar {
+  width: 100%;
+}
+.search-bar input {
+  padding: 1.2rem 1.2rem;
+  border: 1px solid #c1bdbd;
+  background-color: var(--background-color);
+  font-size: 1rem;
+  width: 50%;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.search-bar input:focus {
+  border-color: var(--text-color);
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.category-btn {
+  background: none;
+  border: none;
+  padding: 0.7rem;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    font-weight 0.2s;
+  position: relative;
+  border: 1px solid #c1bdbd;
+}
+
+.category-btn:hover {
+  border: 1px solid var(--text-color);
+}
+
+.category-btn.active {
+  color: white;
+  background-color: var(--text-color);
+  border: none;
+}
+
+.studios-count {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+.studios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.studio-card {
+  background: transparent;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid var(--secondary-text);
+  transition: all 0.3s ease;
+}
+
+.studio-card:hover {
+  background-color: var(--primary-color);
+  transition: all 0.3s;
+  color: var(--secondary-color);
+}
+
+.studio-card:hover .studio-name {
+  color: var(--background-color);
+}
+
+.studio-category {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--secondary-text);
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.studio-card:hover .studio-category {
+  color: var(--secondary-color);
+}
+
+.studio-name {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+  transition: color 0.3s;
+  font-family: "Viaoda Libre", serif;
+}
+
+.studio-description {
+  font-size: clamp(0.85rem, 0.95vw, 0.95rem);
+  line-height: 1.5;
+  color: #888;
+  margin: 0;
+  margin-top: clamp(20px, 3vw, 30px);
+  transition: color 0.3s;
+}
