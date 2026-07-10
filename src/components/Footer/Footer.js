@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import './Footer.css';
 
 function Footer() {
@@ -11,6 +12,7 @@ function Footer() {
         fontFamily: 'inherit',
         padding: 0,
     };
+    const navigate = useNavigate();
 
     return (
         <footer className="site-footer">
@@ -26,10 +28,42 @@ function Footer() {
                     <div className="footer-col">
                         <h4>Platform</h4>
                         <ul>
-                            <li><button type="button" style={linkStyle}>Bookings</button></li>
-                            <li><button type="button" style={linkStyle}>Payments</button></li>
-                            <li><button type="button" style={linkStyle}>Marketing</button></li>
-                            <li><button type="button" style={linkStyle}>Staff</button></li>
+                            <li>
+                                <button
+                                    type="button"
+                                    style={linkStyle}
+                                    onClick={() => document.getElementById('platform')?.scrollIntoView({ behavior: 'smooth' })}
+                                >
+                                    Bookings
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    type="button"
+                                    style={linkStyle}
+                                    onClick={() => document.getElementById('platform')?.scrollIntoView({ behavior: 'smooth' })}
+                                >
+                                    Payments
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    type="button"
+                                    style={linkStyle}
+                                    onClick={() => document.getElementById('platform')?.scrollIntoView({ behavior: 'smooth' })}
+                                >
+                                    Marketing
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    type="button"
+                                    style={linkStyle}
+                                    onClick={() => document.getElementById('platform')?.scrollIntoView({ behavior: 'smooth' })}
+                                >
+                                    Staff
+                                </button>
+                            </li>
                         </ul>
                     </div>
 
@@ -39,7 +73,15 @@ function Footer() {
                             <ul>
                                 <li><button type="button" style={linkStyle}>Pricing</button></li>
                                 <li><button type="button" style={linkStyle}>FAQ</button></li>
-                                <li><button type="button" style={linkStyle}>Discover</button></li>
+                                <li>
+                                    <button
+                                        type="button"
+                                        style={linkStyle}
+                                        onClick={() => { navigate('/browse'); window.scrollTo(0, 0); }}
+                                    >
+                                        Discover
+                                    </button>
+                                </li>
                             </ul>
                         </div>
                     </div>
